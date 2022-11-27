@@ -4,6 +4,7 @@ from typing import List
 
 REQUIREMENT_FILE_NAME="requirements.txt"
 HYPHEN_E_DOT = "-e ."
+
 def get_requirements()->List[str]:
     
     with open(REQUIREMENT_FILE_NAME) as requirement_file:
@@ -18,7 +19,7 @@ def get_requirements()->List[str]:
 
 setup(
     name="sensor",
-    version="0.0.1",
+    version="0.0.2",
     author="ineuron",
     author_email="avnish@ineuron.ai",
     packages = find_packages(),
