@@ -3,7 +3,7 @@ from sensor.exception import SensorException
 from sensor.logger import logging
 from typing import Optional
 import os,sys 
-from sklearn.preprocessing import Pipeline
+from sklearn.pipeline import Pipeline
 import pandas as pd
 from sensor import utils
 import numpy as np
