@@ -77,10 +77,7 @@ jobs:
   - name: Docker System Prune to Remove Old Images
     run: |
       docker system prune -f
-  - name: code in services
-    run: |
-      stdin_open: True
-    
+  
   
 
 
