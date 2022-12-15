@@ -21,7 +21,6 @@ jobs:
      run: |
       sudo apt-get update
       sudo apt-get install -y jq unzip
-
    - name: Configure AWS credentials
      uses: aws-actions/configure-aws-credentials@v1
      with:
@@ -46,7 +45,6 @@ jobs:
        docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
        docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
        echo "::set-output name=image::$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" 
-
  Continuous-Deployment:
   needs: build-and-push-ecr-image
   runs-on: self-hosted
